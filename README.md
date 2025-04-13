@@ -1,16 +1,40 @@
-<<<<<<< HEAD
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my portfolio! This is a showcase of my skills, projects, and experience as a developer. This project is built with **React** (using Vite.js) to demonstrate my front-end development skills.
 
-Currently, two official plugins are available:
+## Table of Contents
+- [Introduction](#introduction)
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Setup Instructions](#setup-instructions)
+- [Live Demo](#live-demo)
+- [Contact](#contact)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Introduction
 
-## Expanding the ESLint configuration
+This portfolio demonstrates my development journey, including various projects I've worked on, my technical skills, and how I approach problem-solving. The site is designed to be responsive and visually appealing, using modern web technologies like React and Vite.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# my-portfolio
->>>>>>> fd3ebbf8035f9b8900bf6669d652bf9820d4acb7
+## Technologies Used
+- **Frontend**: 
+  - React.js
+  - Vite.js (for fast development and building)
+  - CSS3 / SCSS
+  - JavaScript (ES6+)
+  - HTML5
+- **Additional Tools**:
+  - GitHub Pages / Netlify for deployment
+  - Firebase for backend services (if applicable)
+  
+## Features
+- **Dark Mode Toggle**: Switch between dark and light themes.
+- **Interactive 3D Design**: Engaging 3D elements and animations to demonstrate creative skills.
+- **Responsive Layout**: Fully responsive design optimized for all screen sizes (mobile, tablet, and desktop).
+- **Floating Chat Icon**: WhatsApp or chat icon for easy communication.
+
+## Setup Instructions
+
+To run this project locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Ueslly-Code/my-portfolio.git
