@@ -25,11 +25,6 @@ This portfolio demonstrates my development journey, including various projects I
   - GitHub Pages / Netlify for deployment
   - Firebase for backend services (if applicable)
   
-## Features
-- **Dark Mode Toggle**: Switch between dark and light themes.
-- **Interactive 3D Design**: Engaging 3D elements and animations to demonstrate creative skills.
-- **Responsive Layout**: Fully responsive design optimized for all screen sizes (mobile, tablet, and desktop).
-- **Floating Chat Icon**: WhatsApp or chat icon for easy communication.
 
 ## Setup Instructions
 
