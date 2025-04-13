@@ -1,27 +1,29 @@
-import React from 'react';
+import React from "react";
 import portfolio from "../../public/portfolio.png"; // Imported properly
-import weather from "../../public/1.mp4";     // Add this image to your public folder
-import result from "../../public/2.mp4";       // Add this image to your public folder
 import { motion } from "framer-motion";
+import Calculator from "../../public/calculator.png";
+import To_Do from "../../public/To-Do.png";
 
 const projects = [
   {
-    title: 'Portfolio Website',
-    description: 'A sleek and responsive portfolio made using React, Tailwind CSS, and Framer Motion.',
-    img: '../../public/portfolio.png',
-    link: 'https://your-portfolio-link.com',
+    title: "Portfolio Website",
+    description:
+      "A sleek and responsive portfolio made using React, Tailwind CSS, and Framer Motion.",
+    img: "../../public/portfolio.png",
+    link: "https://github.com/Ueslly-Code/my-portfolio.git",
   },
   {
-    title: 'Weather App',
-    description: 'Real-time weather app using OpenWeather API and modern React hooks.',
-    img: '../../public/1.mp4',
-    link: 'https://your-weather-app.com',
+    title: "Calculator App",
+    description: "A simple calculator built using HTML, CSS, and JavaScript.",
+    img: "../../public/calculator.png",
+    link: "https://github.com/Ueslly-Code/Calculator-App.git",
   },
   {
-    title: 'Student Result System',
-    description: 'Mini project using MySQL and PHP for managing student marks and grades.',
-    img: '../../public/2.mp4',
-    link: 'https://your-result-system.com',
+    title: "Quick Tasks",
+    description:
+      "A simple To-Do List web app built with HTML, CSS, and JavaScript. It allows users to add and delete tasks. The app is responsive, making it easy to use on both desktop and mobile. ",
+    img: "../../public/To-Do.png",
+    link: "https://github.com/Ueslly-Code/QuickTasks.git",
   },
 ];
 
@@ -48,8 +50,12 @@ const ProjectCard = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-bold text-green-600">{project.title}</h3>
-              <p className="text-sm mt-2 text-gray-700">{project.description}</p>
+              <h3 className="text-lg font-bold text-green-600">
+                {project.title}
+              </h3>
+              <p className="text-sm mt-2 text-gray-700">
+                {project.description}
+              </p>
               <a
                 href={project.link}
                 target="_blank"
