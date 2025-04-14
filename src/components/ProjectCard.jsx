@@ -6,15 +6,10 @@ import todoImg from "../assets/To-Do.png";
 
 
 
-
-
-
-
 const projects = [
   {
     title: "Portfolio Website",
-    description:
-      "A sleek and responsive portfolio made using React, Tailwind CSS, and Framer Motion.",
+    description: "A sleek and responsive portfolio made using React, Tailwind CSS, and Framer Motion.",
     img: portfolioImg,
     link: "https://github.com/Ueslly-Code/my-portfolio.git",
   },
@@ -26,12 +21,12 @@ const projects = [
   },
   {
     title: "Quick Tasks",
-    description:
-      "A simple To-Do List web app built with HTML, CSS, and JavaScript. It allows users to add and delete tasks. The app is responsive, making it easy to use on both desktop and mobile. ",
+    description: "A simple To-Do List web app built with HTML, CSS, and JavaScript.",
     img: todoImg,
     link: "https://github.com/Ueslly-Code/QuickTasks.git",
   },
 ];
+
 
 const ProjectCard = () => {
   return (
