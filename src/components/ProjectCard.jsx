@@ -1,8 +1,9 @@
 import React from "react";
-import portfolio from "../../public/portfolio.png"; // Imported properly
+const portfolioImg = "/portfolio.png"; 
+
 import { motion } from "framer-motion";
-import Calculator from "../../public/calculator.png";
-import To_Do from "../../public/To-Do.png";
+const calculatorImg = "/calculator.png"; 
+const ToDoImg = "/TO-Do.png"; 
 
 const projects = [
   {
