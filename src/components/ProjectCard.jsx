@@ -1,29 +1,34 @@
 import React from "react";
-const portfolioImg = "/portfolio.png"; 
-
 import { motion } from "framer-motion";
-const calculatorImg = "/calculator.png"; 
-const ToDoImg = "/TO-Do.png"; 
+import portfolioImg from "../assets/portfolio.png";
+import calculatorImg from "../assets/calculator.png";
+import todoImg from "../assets/To-Do.png";
+
+
+
+
+
+
 
 const projects = [
   {
     title: "Portfolio Website",
     description:
       "A sleek and responsive portfolio made using React, Tailwind CSS, and Framer Motion.",
-    img: "../../public/portfolio.png",
+    img: portfolioImg,
     link: "https://github.com/Ueslly-Code/my-portfolio.git",
   },
   {
     title: "Calculator App",
     description: "A simple calculator built using HTML, CSS, and JavaScript.",
-    img: "../../public/calculator.png",
+    img: calculatorImg,
     link: "https://github.com/Ueslly-Code/Calculator-App.git",
   },
   {
     title: "Quick Tasks",
     description:
       "A simple To-Do List web app built with HTML, CSS, and JavaScript. It allows users to add and delete tasks. The app is responsive, making it easy to use on both desktop and mobile. ",
-    img: "../../public/To-Do.png",
+    img: todoImg,
     link: "https://github.com/Ueslly-Code/QuickTasks.git",
   },
 ];
