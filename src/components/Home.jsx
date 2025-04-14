@@ -5,7 +5,11 @@ import { RiReactjsLine, RiTailwindCssFill } from "react-icons/ri";
 import { SiMysql } from "react-icons/si";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
-import pic2 from "../../public/profile.png";
+const profileImg = "../assets/profile.png"; 
+import calculatorImg from "../assets/profile.png";
+
+<img src={calculatorImg} alt="Calculator" />
+
 
 
 const Home = () => {
@@ -89,9 +93,8 @@ const Home = () => {
           className="md:w-1/2 order-1 md:order-2 flex justify-center"
         >
           <div className="relative group">
-            <img
-              src={pic2}
-              alt="Aniket"
+          <img src={calculatorImg} alt="Calculator" 
+           
               className="rounded-full w-[300px] h-[300px] md:w-[400px] md:h-[400px] object-cover shadow-xl transition duration-300 border-4 border-green-500 group-hover:scale-105"
             />
             <div className="outline-regal-blue absolute inset-0 rounded-full border-4 border-green-400 animate-pulse opacity-30 group-hover:opacity-50" />
