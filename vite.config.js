@@ -13,12 +13,11 @@ export default defineConfig({
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
+  base: '/your-repo-name/',
   darkMode: 'class', // This is important - 'class' enables manual toggling
   theme: {
     extend: {},
   },
-
-
 });
 
 
