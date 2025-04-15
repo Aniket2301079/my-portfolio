@@ -5,7 +5,6 @@ Welcome to my portfolio! This is a showcase of my skills, projects, and experien
 ## Table of Contents
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
-- [Features](#features)
 - [Setup Instructions](#setup-instructions)
 - [Live Demo](https://portfolioaniket010.netlify.app/)
 - [Contact](#contact)
@@ -23,9 +22,7 @@ This portfolio demonstrates my development journey, including various projects I
   - HTML5
 - **Additional Tools**:
   - GitHub Pages / Netlify for deployment
-  - Firebase for backend services (if applicable)
-  
-
+    
 ## Setup Instructions
 
 To run this project locally:
