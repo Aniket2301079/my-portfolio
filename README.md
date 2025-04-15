@@ -7,7 +7,7 @@ Welcome to my portfolio! This is a showcase of my skills, projects, and experien
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Setup Instructions](#setup-instructions)
-- [Live Demo](#live-demo)
+- [Live Demo](https://portfolioaniket010.netlify.app/)
 - [Contact](#contact)
 
 ## Introduction
