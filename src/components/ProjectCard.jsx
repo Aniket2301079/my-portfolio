@@ -2,9 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import portfolioImg from "../assets/portfolio.png";
 import calculatorImg from "../assets/calculator.png";
-import todoImg from "../assets/To-Do.png";
-
-
+import todoImg from "../assets/todo.png"; // ✅ renamed to lowercase
 
 const projects = [
   {
@@ -26,7 +24,6 @@ const projects = [
     link: "https://github.com/Ueslly-Code/QuickTasks.git",
   },
 ];
-
 
 const ProjectCard = () => {
   return (
