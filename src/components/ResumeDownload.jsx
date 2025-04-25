@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-const resumeImg = "../assets/profile.png";
+
 
 
 const ResumeDownload = () => {
