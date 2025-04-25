@@ -15,7 +15,7 @@ const ResumeDownload = () => {
         <p className="text-gray-300 mb-4 text-lg">Download My Resume</p>
 
         
-         <a href="/resume.jpg" download>
+         <a href="/resume.pdf" download>
           <button className="relative group bg-green-500 text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-green-600 transition-all duration-300">
             Download Resume
             <span className="absolute inset-0 rounded-full border-2 border-green-400 opacity-0 group-hover:opacity-60 animate-pulse"></span>
