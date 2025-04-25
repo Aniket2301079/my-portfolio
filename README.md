@@ -6,7 +6,7 @@ Welcome to my portfolio! This is a showcase of my skills, projects, and experien
 - [Introduction](#introduction)
 - [Technologies Used](#technologies-used)
 - [Setup Instructions](#setup-instructions)
-- [Live Demo](https://portfolioaniket010.netlify.app/)
+- [Live Demo](https://my-portfolio-01079-al9rc2ftu-anikets-projects-d70263bd.vercel.app/)
 - [Contact](#contact)
 
 ## Introduction
