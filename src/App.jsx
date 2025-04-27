@@ -1,16 +1,13 @@
-// App.jsx
 import React, { useState } from "react";
 import LandingPage from "./components/LandingPage";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
+import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import ResumeDownload from "./components/ResumeDownload";
 import Contact from "./components/Contact";
 import ProjectCard from "./components/ProjectCard";
 import Footer from "./components/Footer";
-import BackToTopButton from "./components/BackToTopButton";
-
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const App = () => {
   const [showLanding, setShowLanding] = useState(true);
@@ -21,18 +18,16 @@ const App = () => {
 
   return (
     <div className="bg-black dark:white">
-      {showLanding ?  (
+      {showLanding ? (
         <LandingPage onExploreClick={handleExploreClick} />
       ) : (
         <>
           <div id="home">
-            
             <Navbar />
           </div>
-         
-          <Home />
+
+          <Hero />
           <div id="about"></div>
-          <ResumeDownload />
           <About />
           <div id="skill"></div>
 
@@ -43,7 +38,7 @@ const App = () => {
           <div id="contact"></div>
           <Contact />
           <Footer />
-          <BackToTopButton />
+          <WhatsAppButton />
         </>
       )}
     </div>

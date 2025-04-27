@@ -1,103 +1,55 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaUserGraduate, FaAward, FaLaptopCode, FaBullseye } from "react-icons/fa";
-
-const sectionVariants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: (i) => ({
-    opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.2, duration: 0.6 },
-  }),
-};
+// src/components/About.jsx
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaDownload } from 'react-icons/fa';
 
 const About = () => {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 py-20 bg-black text-white"
-      id="about"
-    >
-      <motion.h1
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl font-bold text-green-500 mb-12 text-center"
+    <section id="about" className="min-h-screen flex flex-col md:flex-row items-center justify-center gap-12 px-6 bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-white py-12" style={{ boxShadow: "0px 0px 12px rgba(3, 136, 255, 1)" }}>
+      
+      {/* Left Side - Image */}
+      <motion.div 
+        className="flex-1 flex justify-center"
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
       >
-        About Me
-      </motion.h1>
+        <img 
+          src="/about-img.png" // about image here (you can use same or different)
+          alt="About Me"
+          className="w-80 h-80 object-cover rounded-xl shadow-md dark:shadow-gray-700"
+        />
+      </motion.div>
 
-      {/* Intro */}
-      <motion.p
-        custom={0}
-        variants={sectionVariants}
-        className="text-lg text-gray-300 leading-relaxed mb-12 text-center max-w-3xl mx-auto"
+      {/* Right Side - Text */}
+      <motion.div 
+        className="flex-1"
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
       >
-        Hi, I'm <span className="font-semibold text-green-500">Aniket</span>, a
-        BCA student passionate about <strong>web development</strong>. I enjoy
-        creating clean, functional websites and exploring how technology can
-        improve user experience and solve real-world problems.
-      </motion.p>
+        <h2 className="text-4xl font-bold mb-6 text-center md:text-left">About Me</h2>
+        <p className="text-lg mb-6 text-gray-600 dark:text-gray-400 leading-relaxed">
+          I'm Aniket, a passionate web developer and designer. 
+          I specialize in creating interactive websites, solving complex problems, 
+          and bringing ideas to life through clean, efficient code. 
+          Let's build something amazing together!
+        </p>
 
-      <div className="space-y-16">
+        <div className="flex justify-center md:justify-start">
+          <a
+            href="/Aniket-Resume.pdf"  // put your resume pdf in /public folder
+            download
+            className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300"
+            style={{ boxShadow: "0px 0px 12px rgba(3, 136, 255, 1)" }}
+          >
+            <FaDownload />
+            Download Resume
+          </a>
+        </div>
+      </motion.div>
 
-        {/* Education */}
-        <motion.section custom={1} variants={sectionVariants}>
-          <div className="flex items-center mb-4 space-x-2">
-            <FaUserGraduate className="text-green-400 text-xl" />
-            <h2 className="text-green-400 font-bold text-xl">Education & Training</h2>
-          </div>
-          <ul className="list-disc list-inside text-gray-300 space-y-1 pl-4">
-            <li>BCA, Teerthanker Mahaveer University – 2026</li>
-            <li>Front-End Web Development</li>
-            <li>JavaScript & React Bootcamp</li>
-          </ul>
-        </motion.section>
-
-        {/* Skills */}
-        <motion.section custom={2} variants={sectionVariants}>
-          <div className="flex items-center mb-4 space-x-2">
-            <FaLaptopCode className="text-green-400 text-xl" />
-            <h2 className="text-green-400 font-bold text-xl">Skills & Expertise</h2>
-          </div>
-          <ul className="list-disc list-inside text-gray-300 space-y-1 pl-4">
-            <li>HTML, CSS, JavaScript, React, Tailwind CSS</li>
-            <li>Version Control: Git & GitHub</li>
-            <li>Responsive Design, UI/UX Fundamentals</li>
-            <li>Strong problem-solving & collaboration skills</li>
-          </ul>
-        </motion.section>
-
-        {/* Achievements */}
-        <motion.section custom={3} variants={sectionVariants}>
-          <div className="flex items-center mb-4 space-x-2">
-            <FaAward className="text-green-400 text-xl" />
-            <h2 className="text-green-400 font-bold text-xl">Achievements & Awards</h2>
-          </div>
-          <ul className="list-disc list-inside text-gray-300 space-y-1 pl-4">
-            <li>Introduction to Front-End by Simplilearn | SkillUP (2024)</li>
-            <li>AI for Beginners by HP Life (2024)</li>
-          </ul>
-        </motion.section>
-
-        {/* Mission */}
-        <motion.section custom={4} variants={sectionVariants}>
-          <div className="flex items-center mb-4 space-x-2">
-            <FaBullseye className="text-green-400 text-xl" />
-            <h2 className="text-green-400 font-bold text-xl">Mission Statement</h2>
-          </div>
-          <p className="text-gray-300 leading-relaxed">
-            My mission is to leverage my creativity and technical skills to build
-            innovative digital solutions that deliver real impact. I'm committed
-            to continuous learning, growth, and collaboration to contribute
-            meaningfully to the digital world.
-          </p>
-        </motion.section>
-
-      </div>
-    </motion.div>
+    </section>
   );
 };
 

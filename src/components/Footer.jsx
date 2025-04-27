@@ -1,3 +1,4 @@
+// src/components/Footer.jsx
 import React from "react";
 import {
   FaFacebook,
@@ -12,13 +13,14 @@ const Footer = () => {
 
   return (
     <>
-      <hr className="border-gray-700" />
+      <hr className="border-gray-700" style={{ boxShadow: "0px 0px 12px rgba(3, 136, 255, 1)" }} />
       <motion.footer
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="py-12 bg-black text-white"
+        className="py-12 text-white dark:bg-gray-950 dark:text-gray-300 bg-gray-800"
+        style={{ boxShadow: "0px 0px 12px rgba(3, 136, 255, 1)" }}
       >
         <div className="max-w-screen-2xl container mx-auto px-4 md:px-20">
           <div className="flex flex-col items-center justify-center">
@@ -74,10 +76,10 @@ const Footer = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.6 }}
             >
-              <p className="text-sm text-gray-300">
+              <p className="text-sm text-gray-300 dark:text-gray-100">
                 &copy; {currentYear} Aniket. All rights reserved.
               </p>
-              <p className="text-xs text-gray-500 italic mt-2">
+              <p className="text-xs text-gray-500 dark:text-gray-400 italic mt-2">
                 "Simplicity ✨ fuels the engine 🛠️ of efficiency 🚀."
               </p>
             </motion.div>

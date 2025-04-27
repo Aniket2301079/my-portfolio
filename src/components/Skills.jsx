@@ -1,86 +1,48 @@
+// src/components/Skills.jsx
+import React from 'react';
+import { motion } from 'framer-motion';
 
-
-import React, { useEffect, useState } from "react";
-import {
-  CircularProgressbarWithChildren,
-  buildStyles,
-} from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-import { motion } from "framer-motion";
-
-const skillsData = [
-  { name: "React", percentage: 85 },
-  { name: "JavaScript", percentage: 75 },
-  { name: "Tailwind CSS", percentage: 70 },
-  { name: "MySQL", percentage: 65 },
+const skills = [
+  { name: 'HTML', level: '95%' },
+  { name: 'CSS', level: '90%' },
+  { name: 'JavaScript', level: '85%' },
+  { name: 'React.js', level: '80%' },
+  { name: 'Tailwind CSS', level: '85%' },
+  { name: 'Node.js', level: '75%' },
 ];
 
 const Skills = () => {
-  const [progressValues, setProgressValues] = useState(
-    skillsData.map(() => 0)
-  );
-
-  useEffect(() => {
-    const intervals = skillsData.map((skill, index) => {
-      return setInterval(() => {
-        setProgressValues((prev) => {
-          const updated = [...prev];
-          if (updated[index] < skill.percentage) {
-            updated[index] += 1;
-          }
-          return updated;
-        });
-      }, 20);
-    });
-
-    return () => intervals.forEach((int) => clearInterval(int));
-  }, []);
-
   return (
-    <motion.section
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="w-full bg-black py-20 text-white"
-      id="skill"
-    >
-      <div className="max-w-screen-lg mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-14 text-center text-green-500">
-          My Skills
-        </h2>
+    <section id="skills" className="min-h-screen flex flex-col items-center justify-center px-6 py-12 bg-white dark:bg-gray-900 text-gray-800 dark:text-white" style={{ boxShadow: "0px 0px 12px rgba(3, 136, 255, 1)" }}>
+      
+      <h2 className="text-4xl font-bold mb-10">My Skills</h2>
 
-        <div className="flex overflow-x-auto space-x-6 md:grid md:grid-cols-4 md:gap-10 scrollbar-hide">
-          {skillsData.map((skill, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.7 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              className="flex-shrink-0 w-40 md:w-auto flex flex-col items-center bg-gray-900 rounded-xl p-6 shadow-xl hover:shadow-green-500/30 transition duration-300"
-            >
-              <div className="w-28 h-28">
-                <CircularProgressbarWithChildren
-                  value={progressValues[index]}
-                  styles={buildStyles({
-                    pathColor: `rgba(34,197,94, ${progressValues[index] / 100})`,
-                    trailColor: "#222",
-                  })}
-                >
-                  <div className="text-sm font-bold text-green-400">
-                    {progressValues[index]}%
-                  </div>
-                </CircularProgressbarWithChildren>
-              </div>
-              <h4 className="mt-4 font-semibold text-lg text-center text-gray-200">
-                {skill.name}
-              </h4>
-            </motion.div>
-          ))}
-        </div>
+      <div className="w-full max-w-3xl space-y-8">
+        {skills.map((skill, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            className="w-full"
+          >
+            <div className="flex justify-between mb-2">
+              <span className="text-lg font-medium">{skill.name}</span>
+              <span className="text-sm font-semibold text-blue-500">{skill.level}</span>
+            </div>
+
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-4 overflow-hidden" style={{ boxShadow: "0px 0px 12px rgba(3, 136, 255, 1)" }}>
+              <div
+                className="h-4 bg-gradient-to-r from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 rounded-full transition-all duration-700 hover:scale-x-105 origin-left"
+                style={{ width: skill.level }}
+                
+              ></div>
+            </div>
+          </motion.div>
+        ))}
       </div>
-    </motion.section>
+
+    </section>
   );
 };
 

@@ -1,73 +1,81 @@
-import React from "react";
-import { motion } from "framer-motion";
-import portfolioImg from "../assets/portfolio.png";
-import calculatorImg from "../assets/calculator.png";
-import todoImg from "../assets/todo.png"; // ✅ renamed to lowercase
+// src/components/Projects.jsx
+import React from 'react';
+import { motion } from 'framer-motion';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "A sleek and responsive portfolio made using React, Tailwind CSS, and Framer Motion.",
-    img: portfolioImg,
-    link: "https://github.com/Ueslly-Code/my-portfolio.git",
+    title: 'Anime Fan App',
+    img: '/projects/anime-app.png', // your project image
+    github: 'https://github.com/Ueslly-Code/anime-fan-app',
+    demo: 'https://anime-fan-app.netlify.app/',
   },
   {
-    title: "Calculator App",
-    description: "A simple calculator built using HTML, CSS, and JavaScript.",
-    img: calculatorImg,
-    link: "https://github.com/Ueslly-Code/Calculator-App.git",
+    title: 'Portfolio Website',
+    img: '/projects/portfolio.png',
+    github: 'https://github.com/Ueslly-Code/my-portfolio',
+    demo: 'https://portfolioaniket010.netlify.app/',
   },
   {
-    title: "Quick Tasks",
-    description: "A simple To-Do List web app built with HTML, CSS, and JavaScript.",
-    img: todoImg,
-    link: "https://github.com/Ueslly-Code/QuickTasks.git",
+    title: 'Whiteboard Project',
+    img: '/projects/whiteboard.png',
+    github: 'https://github.com/Ueslly-Code/whiteboard-project',
+    demo: 'https://whiteboard-app.netlify.app/',
   },
 ];
 
-const ProjectCard = () => {
+const Projects = () => {
   return (
-    <section className="py-20 bg-black text-white" id="projects">
-      <h2 className="text-3xl font-bold text-center text-green-500 mb-14">
-        Projects
-      </h2>
+    <section id="projects" className=" min-h-screen flex flex-col items-center justify-center px-6 py-12 bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-white" style={{ boxShadow: "0px 0px 12px rgba(3, 136, 255, 1)" }}>
+      
+      <h2 className="text-4xl font-bold mb-10">My Projects</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-20">
-        {projects.map((project, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: idx * 0.2 }}
-            viewport={{ once: true }}
-            className="bg-white text-black rounded-xl shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
+      <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+        {projects.map((project, index) => (
+          <motion.div 
+            key={index}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 group"
           >
-            <img
-              src={project.img}
-              alt={`Project - ${project.title}`}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="text-lg font-bold text-green-600">
-                {project.title}
-              </h3>
-              <p className="text-sm mt-2 text-gray-700">
-                {project.description}
-              </p>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-green-500 font-semibold mt-4 inline-block hover:underline"
-              >
-                View Project →
-              </a>
+            <div className="overflow-hidden" style={{ boxShadow: "0px 0px 12px rgba(3, 136, 255, 1)" }}>
+              <img 
+                src={project.img}
+                alt={project.title}
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+              />
             </div>
+
+            <div className="p-4 flex flex-col items-center">
+              <h3 className="text-xl font-semibold mb-4">{project.title}</h3>
+
+              <div className="flex gap-4">
+                <a 
+                  href={project.github} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 hover:bg-blue-500 hover:text-white dark:hover:bg-blue-500 px-3 py-2 rounded-md text-sm transition-all duration-300"
+                >
+                  <FaGithub /> Code
+                </a>
+                <a 
+                  href={project.demo} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-gray-200 dark:bg-gray-700 hover:bg-green-500 hover:text-white dark:hover:bg-green-500 px-3 py-2 rounded-md text-sm transition-all duration-300"
+                >
+                  <FaExternalLinkAlt /> Live
+                </a>
+              </div>
+            </div>
+
           </motion.div>
         ))}
       </div>
+
     </section>
   );
 };
 
-export default ProjectCard;
+export default Projects;
