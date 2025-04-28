@@ -86,5 +86,3 @@ Feel free to reach out if you'd like to collaborate or just say hi!
 
 ---
 
-Would you also like me to make a **better version with some fancy badges** (like "Built with React", "Live on Vercel", etc.)? 🚀🎖️  
-(It's very trendy now in GitHub READMEs!)
