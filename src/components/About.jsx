@@ -15,9 +15,10 @@ const About = () => {
         transition={{ duration: 1 }}
       >
         <img 
-          src="/about-img.png" // about image here (you can use same or different)
+          src="/profile.jpg" // about image here (you can use same or different)
           alt="About Me"
           className="w-80 h-80 object-cover rounded-xl shadow-md dark:shadow-gray-700"
+          style={{ boxShadow: "12px 12px 12px 12px rgba(3, 136, 255, 1)" }}
         />
       </motion.div>
 

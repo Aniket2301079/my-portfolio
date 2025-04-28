@@ -6,7 +6,7 @@ import { FaChevronDown } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex flex-col md:flex-row justify-center items-center gap-8 bg-white dark:bg-gray-900 text-gray-800 dark:text-white px-6">
+    <section id="home" className="relative overflow-hidden min-h-screen flex flex-col md:flex-row justify-center items-center gap-8 bg-white dark:bg-gray-900 text-gray-800 dark:text-white px-6">
       
       {/* Left Side - Text */}
       <div className="flex-1 text-center md:text-left">
@@ -37,20 +37,28 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      {/* Right Side - Image */}
-      <motion.div 
-        className="flex-1 flex justify-center"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <img 
-          src="/profile.png"  // <<== apna image yaha dena
+      {/* Right Side - Image with Blob Background */}
+      <div className="flex-1 flex justify-center items-center relative">
+        
+        {/* Morphing Blob */}
+        <motion.div 
+          className="absolute w-80 h-80 bg-blue-400 dark:bg-blue-600 opacity-30 rounded-full animate-blob z-0"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+        ></motion.div>
+
+        {/* Profile Image */}
+        <motion.img 
+          src="/profile.jpg"  // <<== Apna image yaha
           alt="Profile"
-          className="w-72 h-72 object-cover rounded-full shadow-lg dark:shadow-gray-700"
+          className="w-72 h-72 object-cover rounded-full shadow-lg dark:shadow-gray-700 relative z-10"
           style={{ boxShadow: "0px 0px 150px rgba(3, 136, 255, 1)" }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
         />
-      </motion.div>
+      </div>
 
     </section>
   );
