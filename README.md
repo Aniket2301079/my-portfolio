@@ -1,6 +1,3 @@
-Sure Aniket!  
-Here’s a **human-style, clean and professional README** file for [this portfolio project](https://github.com/Ueslly-Code/my-portfolio.git) you shared:
-
 ---
 
 # 🌟 My Portfolio
