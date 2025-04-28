@@ -5,21 +5,21 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projects = [
   {
-    title: 'Anime Fan App',
-    img: '/projects/anime-app.png', // your project image
-    github: 'https://github.com/Ueslly-Code/anime-fan-app',
+    title: 'Portfolio',
+    img: 'Portfolio.png', 
+    github: 'https://github.com/Ueslly-Code/my-portfolio.git',
     demo: 'https://anime-fan-app.netlify.app/',
   },
   {
-    title: 'Portfolio Website',
-    img: '/projects/portfolio.png',
-    github: 'https://github.com/Ueslly-Code/my-portfolio',
+    title: 'Calculator-App',
+    img: 'calculator.png',
+    github: 'https://github.com/Ueslly-Code/Calculator-App.git',
     demo: 'https://portfolioaniket010.netlify.app/',
   },
   {
-    title: 'Whiteboard Project',
-    img: '/projects/whiteboard.png',
-    github: 'https://github.com/Ueslly-Code/whiteboard-project',
+    title: 'Weather App',
+    img: 'todo.png',
+    github: 'https://github.com/Ueslly-Code/Weather_app.git',
     demo: 'https://whiteboard-app.netlify.app/',
   },
 ];
