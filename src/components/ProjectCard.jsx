@@ -1,4 +1,4 @@
-// src/components/Projects.jsx
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
@@ -8,7 +8,7 @@ const projects = [
     title: 'Portfolio',
     img: 'Portfolio.png', 
     github: 'https://github.com/Ueslly-Code/my-portfolio.git',
-    demo: 'https://anime-fan-app.netlify.app/',
+    demo: 'https://my-portfolio-8q41.vercel.app/',
   },
   {
     title: 'Calculator-App',
