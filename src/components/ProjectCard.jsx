@@ -14,13 +14,13 @@ const projects = [
     title: 'Calculator-App',
     img: 'calculator.png',
     github: 'https://github.com/Ueslly-Code/Calculator-App.git',
-    demo: 'https://portfolioaniket010.netlify.app/',
+    demo: 'https://calculator-01079.netlify.app/',
   },
   {
-    title: 'Weather App',
+    title: 'Todo-App',
     img: 'todo.png',
-    github: 'https://github.com/Ueslly-Code/Weather_app.git',
-    demo: 'https://whiteboard-app.netlify.app/',
+    github: 'https://github.com/Aniket2301079/QuickTasks.git',
+    demo: 'https://cozy-panda-588515.netlify.app/',
   },
 ];
 
