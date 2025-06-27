@@ -20,7 +20,7 @@ const projects = [
     title: 'Todo-App',
     img: 'todo.png',
     github: 'https://github.com/Aniket2301079/QuickTasks.git',
-    demo: 'https://cozy-panda-588515.netlify.app/',
+    demo: 'https://quicktask1.netlify.app/',
   },
 ];
 
